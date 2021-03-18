@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css">
+</head>
+
+<body>
+    <!-- Begin header -->
+
+    <header class="header topbar">
+        <div class="topbar__left">
+
+
+            <div class="topbar__logo align-item-center">
+                <a href="#" class="topbar__link-logo">
+                    <img src="./assets/images/Logo_VND.png" alt="" class="topbar__img">
+                </a>
+            </div>
+            <div class="topbar__search align-item-center">
+                <input type="text" class="search__input" placeholder="Xem chi tiết mã">
+                <a href="#" class="search__icon"> <i class="fas fa-search-dollar"></i> </a>
+            </div>
+
+            <div class="topbar__vnds-clock align-item-center">
+                <span class="topbar__vnds-digital-lock">15:09:52</span>
+                <span class="topbar__vnds-date">18/03/2021</span>
+            </div>
+        </div>
+        <div class="topbar__right">
+            <div class="topbar__show-custody align-item-center">
+                <a href="#" class="topbar__feedback">
+                    <i class="far fa-comments"></i>
+                    Phản hồi
+                </a>
+                <div class="topbar__language-dropdown">
+                    <div class="language-dropdown-btn">
+                        <img width="20" height="20" src="./assets/images/vietnam-logo.png">
+                        <ul class="language-dropdown-list">
+                            <li value="en"><img width="20" height="20"
+                                    src="./assets/images/uk-logo.png"><span>English</span></li>
+                            <li value="vi"><img width="20" height="20"
+                                    src="./assets/images/vietnam-logo.png"><span>Tiếng Việt</span></li>
+                            <li value="zh"><img width="20" height="20"
+                                    src="./assets/images/china-logo.png"><span>中文</span></li>
+                            <li value="jp"><img width="20" height="20"
+                                    src="./assets/images/japan-logo.png"><span>日本語</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="topbar__account">
+                <span class="btn-icon btn-social-icon">
+                    <i class="fa fa-user user-icon"></i>
+                    &nbsp;
+                    &nbsp;
+                    <i class="fa fa-caret-down"></i>
+
+                </span>
+                <ul class="account-dropdown-list">
+                    <li class="user-name"><a href="/thong-tin-ca-nhan">NguyenTu Official</a></li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fas fa-unlock-alt"></i>
+                            &nbsp; Đổi mật khẩu </a>
+                    </li>
+                    <li><a><i class="fa fa-eraser"></i>
+                            Xóa dữ liệu cài đặt
+                        </a></li>
+                    <li><a><i class="fas fa-sign-out-alt"></i>
+                            Đăng xuất
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- End header -->
+
+    <!-- Begin tabbed-content -->
+    <div class="stock-table">
+        <div class="sticky-table-header-wrapper">
+            <table class="table-price fixed-header">
+                <thead>
+                    <tr>
+                        <th rowspan="2" class=" sortable">Mã CK</th>
+                        <th rowspan="2" class=" sortable">TC</th>
+                        <th rowspan="2" class=" sortable">Trần</th>
+                        <th rowspan="2" class=" sortable">Sàn</th>
+                        <th rowspan="2" class="sortable has-toggle" data-slider-group="accumulated"><a
+                                class="btn-link btn-sm toggle-left"><i class="fa fa-caret-left"></i></a><span
+                                data-slider-field="accumulatedVol" class="slidable"><span class="has-content">Tổng
+                                    KL</span></span><a class="btn-link btn-sm toggle-right"><i
+                                    class="fa fa-caret-right"></i></a></th>
+                        <th colspan="6">Bên mua</th>
+                        <th colspan="3" class="">Khớp lệnh</th>
+                        <th colspan="6">Bên bán</th>
+                        <th colspan="3" class="">Giá</th>
+                    </tr>
+                    <tr>
+                        <th class="sortable">Giá 3</th>
+                        <th class="sortable">KL 3</th>
+                        <th class="sortable">Giá 2</th>
+                        <th class="sortable">KL 2</th>
+                        <th class="sortable">Giá 1</th>
+                        <th class="sortable">KL 1</th>
+                        <th class=" sortable">Giá</th>
+                        <th class=" sortable">KL</th>
+                        <th class=" sortable has-toggle" data-slider-group="priceDiff"><a
+                                class="btn-link btn-sm toggle-left"><i class="fa fa-caret-left"></i></a><span
+                                data-slider-field="changeRaw" class="slidable"><span
+                                    class="has-content">+/-</span></span><a class="btn-link btn-sm toggle-right"><i
+                                    class="fa fa-caret-right"></i></a></th>
+                        <th class="sortable">Giá 1</th>
+                        <th class="sortable">KL 1</th>
+                        <th class="sortable">Giá 2</th>
+                        <th class="sortable">KL 2</th>
+                        <th class="sortable">Giá 3</th>
+                        <th class="sortable">KL 3</th>
+                        <th class=" sortable">Cao</th>
+                        <th class=" sortable">TB</th>
+                        <th class=" sortable">Thấp</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <table class="table-price proboard table-price-full" style="margin-top: 59px; margin-bottom: 13203px;">
+            <tbody>
+                <tr id="AAA" class="" data-scroll-page="0">
+                    <td class="txtl has-tooltip company-tooltip has-symbol "
+                        data-tooltip="Công ty cổ phần Nhựa An Phát Xanh"> <a class="symbol txt-lime" id="AAAsym"><span
+                                class="has-symbol">AAA</span></a> </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight"
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAref" class="txt-gia-tc">16.60</span>
+                    </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight sell"
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAceil" class="txt-gia-tran">17.75</span>
+                    </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight"
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAfloor" class="txt-gia-san">15.45</span>
+                    </td>
+                    <td data-slider-group="accumulated"> <span data-slider-field="accumulatedVol"
+                            class="slider-accumulatedVol" style="display: none;"> <span id="AAAtvol"
+                                class="has-content">4,294,50</span> </span> <span data-slider-field="accumulatedVal"
+                            class="slider-accumulatedVal"> <span id="AAAtval" class="has-content">71,924</span>
+                        </span>
+                    </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom sell" data-tooltip="Click đúp để đặt lệnh">
+                        <span id="AAAbP3" class="txt-red">16.55</span>
+                    </td>
+                    <td> <span id="AAAbV3" class="txt-red">79,10</span> </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom sell" data-tooltip="Click đúp để đặt lệnh">
+                        <span id="AAAbP2" class="txt-gia-tc">16.60</span>
+                    </td>
+                    <td> <span id="AAAbV2" class="txt-gia-tc">163,50</span> </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom sell" data-tooltip="Click đúp để đặt lệnh">
+                        <span id="AAAbP1" class="txt-lime">16.65</span>
+                    </td>
+                    <td> <span id="AAAbV1" class="txt-lime">32,00</span> </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight"
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAmatchP" class="txt-lime">16.70</span>
+                    </td>
+                    <td class="cell-highlight"> <span id="AAAmatchV" class="txt-lime">6,60</span> </td>
+                    <td class="cell-highlight" data-slider-group="priceDiff"> <span data-slider-field="changeRaw"
+                            class="slider-changeRaw" style=""> <span id="AAAchange"
+                                class="txt-lime has-content">0.10</span>
+                            <!-- </span> <span data-slider-field="changePercent"
+                            class="slidable slider-changePercent" style="display: none;"> <span id="AAApercent"
+                                class="txt-lime has-content"> 0.6<small>%</small> </span> </span>  -->
+
+                    </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom" data-tooltip="Click đúp để đặt lệnh">
+                        <span id="AAAoP1" class="txt-lime">16.70</span>
+                    </td>
+                    <td> <span id="AAAoV1" class="txt-lime">26,90</span> </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom" data-tooltip="Click đúp để đặt lệnh">
+                        <span id="AAAoP2" class="txt-lime">16.75</span>
+                    </td>
+                    <td> <span id="AAAoV2" class="txt-lime">72,50</span> </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom" data-tooltip="Click đúp để đặt lệnh">
+                        <span id="AAAoP3" class="txt-lime">16.80</span>
+                    </td>
+                    <td> <span id="AAAoV3" class="txt-lime">82,80</span> </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight sell"
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAhighP" class="txt-lime">17.10</span>
+                    </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight"
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAavgP" class="txt-lime">16.75</span>
+                    </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight"
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAlowP" class="txt-red">16.45</span>
+                    </td>
+
+                    <!-- <td colspan="0" data-slider-group="foreign">  </td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- End tabbed-content -->
+</body>
+
+</html>
