@@ -1,7 +1,17 @@
 :root {
     --primary-color: #f7941d;
-    --text-color: #ccc;
+    --text-color: #d8d8d8;
     --background-hover: rgba(40, 40, 40, .8);
+    --background-table: rgba(30, 30, 30, .85);
+    --background-color-primary: rgba(60, 60, 60, .95);
+    --background-color-hue: #5b5b5b;
+    --color-yellow: #ffd900;
+    --color-green: #0f0;
+    --color-ceil: #ff25ff;
+    --color-floor: #1eeeee;
+    --color-white: #fff;
+    --color-discount: #ff3737;
+    --color-highlight: #373737;
 }
 
 html, body {
@@ -60,7 +70,7 @@ header {
 }
 
 header.topbar {
-    background: rgba(60, 60, 60, .95);
+    background: var(--background-color-primary);
     box-sizing: border-box;
     line-height: 20px;
     padding: 10px 0;
@@ -111,7 +121,7 @@ header.topbar {
 }
 
 .search__icon {
-    background: #5b5b5b;
+    background: var(--background-color-hue);
     color: var(--primary-color);
     height: 25px;
     width: 30px;
@@ -151,7 +161,7 @@ header.topbar {
 }
 
 .language-dropdown-btn>ul {
-    background: #373737;
+    background: var( --color-highlight);
     list-style: none;
     position: absolute;
     width: 130px;
@@ -193,8 +203,8 @@ header.topbar {
 }
 
 .topbar__feedback {
-    color: #ccc;
-    background-color: #555;
+    color: var(--text-color);
+    background-color: var(--background-color-hue);
     border-radius: 3px;
     display: inline-block;
     line-height: 20px;
@@ -206,7 +216,7 @@ header.topbar {
 
 .topbar__feedback:hover {
     background: inherit;
-    color: #fff;
+    color: var(--color-white);
 }
 
 .topbar__account {
@@ -214,7 +224,7 @@ header.topbar {
 }
 
 .topbar__account>ul {
-    background: #373737;
+    background: var( --color-highlight);
     list-style: none;
     position: absolute;
     width: 150px;
@@ -237,28 +247,17 @@ header.topbar {
     padding: 5px 10px;
 }
 
-/* Table content */
+/*=========================================================== Table content ==========================================================*/
 
 .stock-table {
-    padding-top: 70px;
+    padding-top: 90px;
 }
 
 .sticky-table-header-wrapper {
     position: fixed;
-    top: 70px;
+    top: 90px;
     width: 100%;
     z-index: 36;
-}
-
-table.table-price>thead {
-    color: #fff;
-}
-
-.sticky-table-header-wrapper table.table-price {
-    background: rgba(30, 30, 30, .85);
-    box-shadow: 0 4px 10px rgb(0 0 0 / 40%);
-    overflow: visible;
-    width: 100%;
 }
 
 table.table-price {
@@ -267,6 +266,22 @@ table.table-price {
     font-family: helvetica, arial, sans-serif;
     table-layout: fixed;
     width: 100%;
+}
+
+table.table-price>thead {
+    color: var(--color-white);
+}
+
+.sticky-table-header-wrapper table.table-price {
+    background: var(--background-table);
+    box-shadow: 0 4px 10px rgb(0 0 0 / 40%);
+    overflow: visible;
+    width: 100%;
+}
+
+table.table-price tr td, table.table-price tr th {
+    border: 1px solid #343434;
+    user-select: none;
 }
 
 table.table-price>thead>tr th {
@@ -279,13 +294,21 @@ table.table-price>thead>tr th {
     white-space: nowrap;
 }
 
-table.table-price.table-price-full, table.table-price.fixed-header {
-    min-width: 992px;
+table.table-price tbody tr td {
+    border-width: 0 1px;
+    font-family: tahoma, helvetica, arial, sans-serif;
+    height: 26px;
+    line-height: 26px;
+    padding: 0;
+    text-align: right;
 }
 
-table.table-price tr td, table.table-price tr th {
-    border: 1px solid #343434;
-    user-select: none;
+table.table-price>thead>tr>th.sortable:hover {
+    background-color: #222;
+}
+
+table.table-price.table-price-full, table.table-price.fixed-header {
+    min-width: 992px;
 }
 
 table.table-price>thead>tr th.sortable {
@@ -293,24 +316,14 @@ table.table-price>thead>tr th.sortable {
     cursor: url(data:image/gif;base64,R0lGODlhCQALAIABAOiKK////yH5BAEAAAEALAAAAAAJAAsAAAIUjAOnwIrcDJxvQrfs1UnS3DlhUAAAOw==), auto;
 }
 
-.headerSortUp:after {
-    bottom: 0;
-    content: "\F0D8";
-    font-family: FontAwesome;
-    left: 50%;
-    line-height: 5px;
-    margin-left: -3px;
-    position: absolute;
-}
-
-/* Bang Khop lenh */
+/* ============================================ Bang Khop lenh =========================================================*/
 
 .table-price tbody tr:nth-child(odd) {
     background-color: #181818;
 }
 
 .table-price tbody tr:nth-child(even) {
-    background-color: black;
+    background-color: #000;
 }
 
 table.table-price tbody tr td.has-tooltip {
@@ -322,26 +335,18 @@ table.table-price tbody tr td.has-tooltip {
     cursor: pointer;
 }
 
-table.table-price tbody tr td {
-    border-width: 0 1px;
-    font-family: tahoma, helvetica, arial, sans-serif;
-    height: 26px;
-    line-height: 26px;
-    padding: 0;
-    text-align: right;
-}
-
 .txtl {
     text-align: left!important;
 }
 
-.table-price tbody tr:nth-child(odd) td.cell-highlight {
-    background-color: #373737;
+.table-price tbody tr td.cell-highlight {
+    background-color: var( --color-highlight);
 }
 
 .has-symbol.company-tooltip[data-tooltip]:before {
-    width: 250px;
-    left: 82px;
+    position: absolute;
+    width: 300px;
+    left: 83px;
     margin-right: 0;
 }
 
@@ -367,28 +372,29 @@ table.table-price tr .symbol {
     transition: color .15s;
 }
 
-.txt-lime {
-    color: #0f0;
-}
-
 .table-price tbody tr:nth-child(odd) td.cell-highlight {
-    background-color: #373737;
+    background-color: var(--color-highlight);
 }
 
 [data-tooltip]:before {
     position: absolute;
     content: attr(data-tooltip);
-    width: 100px;
-    background-color: #e38008;
+    width: 150px;
+    background-color: var(--primary-color);
     border-radius: 3px;
     line-height: 1.2;
     font-weight: 400;
     z-index: 5;
     padding: 7px;
-    color: #fff;
+    color: var(--color-white);
     text-align: center;
     font-size: 110%;
     transition: all ease-in 0.2s;
+}
+
+[data-tooltip]:last-child:before {
+    right: 100px;
+    width: 100px;
 }
 
 [data-tooltip]:after, [data-tooltip]:before {
@@ -397,25 +403,51 @@ table.table-price tr .symbol {
     pointer-events: none;
 }
 
-[data-tooltip]:hover::before, [data-tooltip]:hover::after{
-    visibility: visible!important;
-    opacity: 1000!important;
+[data-tooltip]:hover::before, 
+[data-tooltip]:hover::after {
+    visibility: visible;
+    opacity: 1000;
 }
 
 table.table-price tr .symbol:hover {
-    color: #fff;
+    color: var(--color-white);
 }
 
-.txt-gia-tc, .txt-yellow {
-    color: #ffd900;
+.txt-standard, .txt-yellow {
+    color: var(--color-yellow);
 }
 
-.has-symbol.company-tooltip[data-tooltip]:after, .tooltip-bottom[data-tooltip]:after {
+.txt-lime {
+    color: var(--color-green);
+}
+
+.txt-floor {
+    color: var(--color-ceil);
+}
+
+.txt-floor, .txt-magenta {
+    color: var(--color-ceil);
+}
+
+.txt-gia-san {
+    color: var(--color-floor);
+}
+
+.txt-aqua, .txt-ceil {
+    color: var(--color-floor);
+}
+
+.txt-discount, .txt-red {
+    color: var(--color-discount);
+}
+
+.has-symbol.company-tooltip[data-tooltip]:after, 
+.tooltip-bottom[data-tooltip]:after {
     bottom: -20%;
     left: 50%;
     margin-left: -5px;
     border-top: 0;
-    border-bottom: 5px solid #e38008;
+    border-bottom: 5px solid var(--primary-color);
     border-right: 5px solid transparent;
     border-left: 5px solid transparent;
 }
@@ -428,41 +460,25 @@ table.table-price tr .symbol:hover {
     width: 0;
     z-index: 5;
 }
-.has-symbol{
+
+.has-symbol {
     padding: 1px 1px 1px 5px;
 }
 
-.has-symbol.company-tooltip[data-tooltip]:before, .tooltip-bottom[data-tooltip]:before {
+.has-symbol.company-tooltip[data-tooltip]:before, 
+.tooltip-bottom[data-tooltip]:before {
     top: 120%;
     left: 50%;
     margin-left: -80px;
 }
 
-.txt-gia-tran {
-    color: #ff25ff;
-}
-
-.txt-gia-tran, .txt-magenta {
-    color: #ff25ff;
-}
-
-.txt-gia-san {
-    color: #1eeeee;
-}
-
-.txt-aqua, .txt-gia-san {
-    color: #1eeeee;
-}
-
-.txt-gia-giam, .txt-red {
-    color: #ff3737;
-}
-
-.table-price tbody tr.selected, .table-price tbody tr:not(.derivative-detail-row):hover {
+.table-price tbody tr.selected, 
+.table-price tbody tr:not(.derivative-detail-row):hover {
     background-color: #444;
     transition-duration: .3s;
 }
 
-.table-price tbody tr.selected td.has-tooltip:hover, .table-price tbody tr:hover td.has-tooltip:hover {
+.table-price tbody tr.selected td.has-tooltip:hover, 
+.table-price tbody tr:hover td.has-tooltip:hover {
     background-color: #555;
 }

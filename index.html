@@ -97,15 +97,15 @@
                         <th rowspan="2" class=" sortable">TC</th>
                         <th rowspan="2" class=" sortable">Trần</th>
                         <th rowspan="2" class=" sortable">Sàn</th>
-                        <th rowspan="2" class="sortable has-toggle" data-slider-group="accumulated"><a
-                                class="btn-link btn-sm toggle-left"><i class="fa fa-caret-left"></i></a><span
-                                data-slider-field="accumulatedVol" class="slidable"><span class="has-content">Tổng
+                        <th rowspan="2" class="sortable has-toggle"><a class="btn-link btn-sm toggle-left"><i
+                                    class="fa fa-caret-left"></i></a><span class="slidable"><span
+                                    class="has-content">Tổng
                                     KL</span></span><a class="btn-link btn-sm toggle-right"><i
                                     class="fa fa-caret-right"></i></a></th>
                         <th colspan="6">Bên mua</th>
-                        <th colspan="3" class="">Khớp lệnh</th>
+                        <th class="sortable" colspan="3" class="">Khớp lệnh</th>
                         <th colspan="6">Bên bán</th>
-                        <th colspan="3" class="">Giá</th>
+                        <th colspan="3" class="sortable">Giá</th>
                     </tr>
                     <tr>
                         <th class="sortable">Giá 3</th>
@@ -116,9 +116,8 @@
                         <th class="sortable">KL 1</th>
                         <th class=" sortable">Giá</th>
                         <th class=" sortable">KL</th>
-                        <th class=" sortable has-toggle" data-slider-group="priceDiff"><a
-                                class="btn-link btn-sm toggle-left"><i class="fa fa-caret-left"></i></a><span
-                                data-slider-field="changeRaw" class="slidable"><span
+                        <th class=" sortable has-toggle"><a class="btn-link btn-sm toggle-left"><i
+                                    class="fa fa-caret-left"></i></a><span class="slidable"><span
                                     class="has-content">+/-</span></span><a class="btn-link btn-sm toggle-right"><i
                                     class="fa fa-caret-right"></i></a></th>
                         <th class="sortable">Giá 1</th>
@@ -137,77 +136,140 @@
 
         <table class="table-price proboard table-price-full" style="margin-top: 59px; margin-bottom: 13203px;">
             <tbody>
-                <tr id="AAA" class="" data-scroll-page="0">
+                <tr id="AAA" class="line-stock" data-scroll-page="0">
                     <td class="txtl has-tooltip company-tooltip has-symbol "
                         data-tooltip="Công ty cổ phần Nhựa An Phát Xanh"> <a class="symbol txt-lime" id="AAAsym"><span
                                 class="has-symbol">AAA</span></a> </td>
                     <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight"
-                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAref" class="txt-gia-tc">16.60</span>
+                        data-tooltip="Click đúp để đặt lệnh"> <span class="txt-standard" id="AAAstandard">16.55</span>
                     </td>
                     <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight sell"
-                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAceil" class="txt-gia-tran">17.75</span>
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAceil" class="txt-floor">17.75</span>
                     </td>
                     <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight"
-                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAfloor" class="txt-gia-san">15.45</span>
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAfloor" class="txt-ceil">15.45</span>
                     </td>
-                    <td data-slider-group="accumulated"> <span data-slider-field="accumulatedVol"
-                            class="slider-accumulatedVol" style="display: none;"> <span id="AAAtvol"
-                                class="has-content">4,294,50</span> </span> <span data-slider-field="accumulatedVal"
-                            class="slider-accumulatedVal"> <span id="AAAtval" class="has-content">71,924</span>
+                    <td> <span class="slider-accumulatedVol" style="display: none;"> <span id="AAAtvol"
+                                class="has-content">4,294,50</span> </span> <span class="slider-accumulatedVal"> <span
+                                id="AAAtval" class="has-content">71,924</span>
                         </span>
                     </td>
                     <td class="has-tooltip price-tooltip tooltip-bottom sell" data-tooltip="Click đúp để đặt lệnh">
-                        <span id="AAAbP3" class="txt-red">16.55</span>
+                        <span id="AAAbP3">16.55</span>
                     </td>
-                    <td> <span id="AAAbV3" class="txt-red">79,10</span> </td>
+                    <td> <span id="AAAbV3">79,10</span> </td>
                     <td class="has-tooltip price-tooltip tooltip-bottom sell" data-tooltip="Click đúp để đặt lệnh">
-                        <span id="AAAbP2" class="txt-gia-tc">16.60</span>
+                        <span id="AAAbP2">16.60</span>
                     </td>
-                    <td> <span id="AAAbV2" class="txt-gia-tc">163,50</span> </td>
+                    <td> <span id="AAAbV2">163,50</span> </td>
                     <td class="has-tooltip price-tooltip tooltip-bottom sell" data-tooltip="Click đúp để đặt lệnh">
-                        <span id="AAAbP1" class="txt-lime">16.65</span>
+                        <span id="AAAbP1">16.65</span>
                     </td>
-                    <td> <span id="AAAbV1" class="txt-lime">32,00</span> </td>
+                    <td> <span id="AAAbV1">32,00</span> </td>
                     <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight"
-                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAmatchP" class="txt-lime">16.70</span>
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAmatchP">16.70</span>
                     </td>
-                    <td class="cell-highlight"> <span id="AAAmatchV" class="txt-lime">6,60</span> </td>
-                    <td class="cell-highlight" data-slider-group="priceDiff"> <span data-slider-field="changeRaw"
-                            class="slider-changeRaw" style=""> <span id="AAAchange"
+                    <td class="cell-highlight"> <span id="AAAmatchV">6,60</span> </td>
+                    <td class="cell-highlight"> <span class="slider-changeRaw" style=""> <span id="AAAchange"
                                 class="txt-lime has-content">0.10</span>
-                            <!-- </span> <span data-slider-field="changePercent"
+                            <!-- </span> <span
                             class="slidable slider-changePercent" style="display: none;"> <span id="AAApercent"
                                 class="txt-lime has-content"> 0.6<small>%</small> </span> </span>  -->
 
                     </td>
                     <td class="has-tooltip price-tooltip tooltip-bottom" data-tooltip="Click đúp để đặt lệnh">
-                        <span id="AAAoP1" class="txt-lime">16.70</span>
+                        <span id="AAAoP1">16.70</span>
                     </td>
-                    <td> <span id="AAAoV1" class="txt-lime">26,90</span> </td>
+                    <td> <span id="AAAoV1">26,90</span> </td>
                     <td class="has-tooltip price-tooltip tooltip-bottom" data-tooltip="Click đúp để đặt lệnh">
-                        <span id="AAAoP2" class="txt-lime">16.75</span>
+                        <span id="AAAoP2">16.75</span>
                     </td>
-                    <td> <span id="AAAoV2" class="txt-lime">72,50</span> </td>
+                    <td> <span id="AAAoV2">72,50</span> </td>
                     <td class="has-tooltip price-tooltip tooltip-bottom" data-tooltip="Click đúp để đặt lệnh">
-                        <span id="AAAoP3" class="txt-lime">16.80</span>
+                        <span id="AAAoP3">16.80</span>
                     </td>
-                    <td> <span id="AAAoV3" class="txt-lime">82,80</span> </td>
+                    <td> <span id="AAAoV3">82,80</span> </td>
                     <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight sell"
-                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAhighP" class="txt-lime">17.10</span>
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAhighP">17.10</span>
                     </td>
                     <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight"
-                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAavgP" class="txt-lime">16.75</span>
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAavgP">16.75</span>
                     </td>
                     <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight"
-                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAlowP" class="txt-red">16.45</span>
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="AAAlowP">16.45</span>
                     </td>
+                </tr>
 
-                    <!-- <td colspan="0" data-slider-group="foreign">  </td> -->
+                <tr id="BBB" class="line-stock" data-scroll-page="0">
+                    <td class="txtl has-tooltip company-tooltip has-symbol "
+                        data-tooltip="Công ty cổ phần Nhựa An Phát Xanh"> <a class="symbol txt-lime" id="BBBsym"><span
+                                class="has-symbol">BBB</span></a> </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight"
+                        data-tooltip="Click đúp để đặt lệnh"> <span class="txt-standard" id="BBBstandard">3.7</span>
+                    </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight sell"
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="BBBceil" class="txt-floor">4.00</span>
+                    </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight"
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="BBBfloor" class="txt-ceil">3.4</span>
+                    </td>
+                    <td> <span class="slider-accumulatedVol" style="display: none;"> <span id="BBBtvol"
+                                class="has-content">4,294,50</span> </span> <span class="slider-accumulatedVal"> <span
+                                id="BBBtval" class="has-content">71,924</span>
+                        </span>
+                    </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom sell" data-tooltip="Click đúp để đặt lệnh">
+                        <span id="BBBbP3">3.5</span>
+                    </td>
+                    <td> <span id="BBBbV3">5.3</span> </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom sell" data-tooltip="Click đúp để đặt lệnh">
+                        <span id="BBBbP2">3.6</span>
+                    </td>
+                    <td> <span id="BBBbV2">9.8</span> </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom sell" data-tooltip="Click đúp để đặt lệnh">
+                        <span id="BBBbP1">3.7</span>
+                    </td>
+                    <td> <span id="BBBbV1">3.9</span> </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight"
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="BBBmatchP">3.8</span>
+                    </td>
+                    <td class="cell-highlight"> <span id="BBBmatchV">10</span> </td>
+                    <td class="cell-highlight"> <span class="slider-changeRaw" style=""> <span id="BBBchange"
+                                class="txt-lime has-content">0.10</span>
+                            <!-- </span> <span
+                            class="slidable slider-changePercent" style="display: none;"> <span id="BBBpercent"
+                                class="txt-lime has-content"> 0.6<small>%</small> </span> </span>  -->
+
+                    </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom" data-tooltip="Click đúp để đặt lệnh">
+                        <span id="BBBoP1">3.8</span>
+                    </td>
+                    <td> <span id="BBBoV1">6.1</span> </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom" data-tooltip="Click đúp để đặt lệnh">
+                        <span id="BBBoP2">3.9</span>
+                    </td>
+                    <td> <span id="BBBoV2">73.90</span> </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom" data-tooltip="Click đúp để đặt lệnh">
+                        <span id="BBBoP3">4.0</span>
+                    </td>
+                    <td> <span id="BBBoV3">162.90</span> </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight sell"
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="BBBhighP">4.0</span>
+                    </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight"
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="BBBavgP">3.8</span>
+                    </td>
+                    <td class="has-tooltip price-tooltip tooltip-bottom cell-highlight"
+                        data-tooltip="Click đúp để đặt lệnh"> <span id="BBBlowP">3.7</span>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
     <!-- End tabbed-content -->
+
+
+    <script src="./assets/Js/main.js"></script>
 </body>
 
 </html>
