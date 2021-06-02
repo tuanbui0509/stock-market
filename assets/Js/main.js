@@ -40,7 +40,6 @@ function changeColor(numStock, tc, floor, ceil) {
 var stocks = document.getElementsByClassName('line-stock');
 
 
-// 6 8 10 15 17 19
 for (let i = 0; i < stocks.length; i++) {
     let line_stock = stocks[i].getElementsByTagName('td');
     let j = 0;
@@ -64,3 +63,8 @@ for (let i = 0; i < stocks.length; i++) {
     }
 }
 
+
+
+showDatLenh=() =>{
+    
+}
