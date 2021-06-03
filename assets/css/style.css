@@ -2,6 +2,7 @@
     --text-color-primary: rgb(189, 189, 189);
     --text-color-second: rgb(132, 128, 145);
     --text-color-third: rgb(159, 169, 186);
+    --background-hover-stock: rgb(53, 48, 69) !important;
     --background-hover: rgba(40, 40, 40, .8);
     --background-table: rgba(30, 30, 30, .85);
     --background-color-primary: #020210;
@@ -154,7 +155,8 @@ header {
 
 .header__right-label-theme, .header__right-label-language {
     cursor: pointer;
-    display: block;
+    display: flex;
+    align-items: center;
     position: relative;
     padding: 5px;
     font-weight: 500;
@@ -163,6 +165,26 @@ header {
     background: none;
     border: none;
     color: var(--color-white-active);
+    width: 110px;
+}
+
+.header__right-label-theme span,.header__right-label-language span{
+    width: 20px;
+    height: auto;
+}
+
+.header__right-label-language span{
+    margin-right: 5px;
+}
+
+.header__right-label-theme span{
+    margin-left: 5px;
+}
+
+.header__right-label-language i{
+    margin-left: 5px;
+    font-size: 12px;
+    font-style: normal;
 }
 
 .header__right-flag {
@@ -224,6 +246,10 @@ header {
     font-size: 13px;
     display: flex;
     align-items: center;
+}
+
+.header__right-account-item:hover{
+    background-color: var(--background-color-body);
 }
 
 .header__right-account-item:last-child {
@@ -362,17 +388,13 @@ tr th{
     width: 8%;
 }
 
-.stock:nth-child(2n+1) .special{
+.special{
     background-color: var(--background-color-body);
 }
 
-.stock:nth-child(2n) .special{
-    background-color: var(--background-color-body);
-}
-
-.stock:hover{
+.stock:hover,.stock:hover .special{
     cursor: pointer;
-    background-color: var(--background-color-body);
+    background: rgb(53, 48, 69) !important;
 }
 
 .stock td{

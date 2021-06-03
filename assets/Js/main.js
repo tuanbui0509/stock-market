@@ -40,3 +40,36 @@ for (let i = 0; i < stocks.length; i++) {
 
 let showLanguage = document.querySelector('.header__right-label-language');
 console.log(showLanguage)
+
+showMenuLanguage = () => {
+    let menuLanguages = document.querySelector('.header__right-language-list');
+    console.log(menuLanguages.style.display)
+    if (menuLanguages.style.display === 'none') {
+        menuLanguages.style.display = 'block';
+    }
+    else{
+        menuLanguages.style.display = 'none';
+    }
+}
+
+showMenuTheme=()=>{
+    let menuThemes = document.querySelector('.header__right-theme-list');
+    console.log(menuThemes.style.display)
+    if (menuThemes.style.display === 'none') {
+        menuThemes.style.display = 'block';
+    }
+    else{
+        menuThemes.style.display = 'none';
+    }
+}
+
+showMenuAccount=()=>{
+    let menuAccounts = document.querySelector('.header__right-account-list');
+    console.log(menuAccounts.style.display)
+    if (menuAccounts.style.display === 'none') {
+        menuAccounts.style.display = 'block';
+    }
+    else{
+        menuAccounts.style.display = 'none';
+    }
+}
