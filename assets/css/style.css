@@ -20,7 +20,6 @@
     --border-primary: 1px solid rgb(44, 41, 53);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,700&display=swap');
 html, body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
@@ -31,51 +30,6 @@ html, body {
 
 body {
     overflow-y: scroll;
-}
-
-a {
-    text-decoration: none;
-    color: var(--text-color-primary);
-}
-
-.img-responsive {
-    width: 100%;
-    height: auto;
-}
-
-.full-height {
-    height: 100vh;
-}
-
-.align-item-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.justify-content-between {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-}
-
-.justify-content-around {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-}
-
-.bg-img {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.bg-img-fixed {
-    background-attachment: fixed;
 }
 
 /* ================================================== Begin style Header ============================================= */
