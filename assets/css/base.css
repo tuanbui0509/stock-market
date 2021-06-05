@@ -1,4 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,700&display=swap');
+:root {
+    --text-color-primary: rgb(189, 189, 189);
+    --text-color-second: rgb(132, 128, 145);
+    --text-color-third: rgb(159, 169, 186);
+    --background-hover-stock: rgb(53, 48, 69) !important;
+    --background-hover: rgba(40, 40, 40, .8);
+    --background-table: rgba(30, 30, 30, .85);
+    --background-color-primary: #020210;
+    --background-color-body: rgb(32, 29, 48);
+    --background-color-hue: rgb(20, 16, 29) !important;
+    --background-color-active: rgb(32, 29, 49);
+    --color-yellow: #ffd900;
+    --color-green: #0f0;
+    --color-floor: #ff25ff;
+    --color-ceil: #1eeeee;
+    --color-white-active: #fff;
+    --color-discount: #ff3737;
+    --color-highlight: #373737;
+    --border-bottom: 2px solid rgb(32, 29, 49);
+    --border-primary: 1px solid rgb(44, 41, 53);
+}
 
 .container {
     max-width: 1200px;
