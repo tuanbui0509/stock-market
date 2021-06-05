@@ -42,22 +42,23 @@ for (let i = 0; i < stocks.length; i++) {
 showMenuTheme = () => {
     let menuThemes = document.querySelector('.header__right-theme-list');
     console.log(menuThemes.style.display)
-    if (menuThemes.style.display === 'none') {
-        menuThemes.style.display = 'block';
+    if (menuThemes.style.display === 'block') {
+        menuThemes.style.display = 'none';
     }
     else {
-        menuThemes.style.display = 'none';
+        menuThemes.style.display = 'block';
     }
 }
 
 showMenuAccount = () => {
     let menuAccounts = document.querySelector('.header__right-account-list');
-    console.log(menuAccounts.style.display)
-    if (menuAccounts.style.display === 'none') {
-        menuAccounts.style.display = 'block';
+    console.log(menuAccounts)
+    // menuAccounts.style.display = 'block';
+    if (menuAccounts.style.display === 'block') {
+        menuAccounts.style.display = 'none';
     }
     else {
-        menuAccounts.style.display = 'none';
+        menuAccounts.style.display = 'block';
     }
 }
 

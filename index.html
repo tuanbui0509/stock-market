@@ -168,11 +168,11 @@
                         <td class="special txt-floor">114</td>
                         <td class="special txt-ceil">99.2</td>
                         <td class="special txt-standard">106.6</td>
-                        <td class="">106.3</td>
+                        <td class="">99.2</td>
                         <td class="">1,100</td>
                         <td class="">106.5</td>
                         <td class="">5,300</td>
-                        <td class="">106.6</td>
+                        <td class="">106.7</td>
                         <td class="">17,500</td>
                         <td class="special">106.9</td>
                         <td class="special">15,000</td>
@@ -209,7 +209,7 @@
             </div>
             <div class="modal-content">
                 <div class="modal-body">
-                    <form class="modal-form" >
+                    <form class="modal-form">
                         <div class="form-input">
                             <div class="form-item">
                                 <label for="id">Số tài khoản</label>
@@ -219,7 +219,7 @@
                                 <label for="stockId">Mã CK</label>
                                 <input id="stockId" type="text" placeholder="BHD">
                             </div>
-                            
+
                             <div class="form-item">
                                 <label for="weight">Khối lượng</label>
                                 <input id="weight" type="number" placeholder="1000">
@@ -234,8 +234,8 @@
                             </div>
                         </div>
                         <div class="form-submit">
-                            <button type="button"  onclick="confirmForm()"  class="btn btn--green">MUA</button>
-                            <button type="button"  class="btn btn--red">BÁN</button>
+                            <button type="button" onclick="confirmForm()" class="btn btn--green">MUA</button>
+                            <button type="button" class="btn btn--red">BÁN</button>
                         </div>
                     </form>
                 </div>
@@ -276,26 +276,27 @@
             <div class="modal-header">
                 <h5 class="modal-header__title">xác nhận đặt lệnh</h5>
                 <i class="fas fa-info-circle modal-header__icon-info"></i>
-            </div> 
+            </div>
             <form class="modal-content-info">
                 <div class="modal-info">
-                    <p class="modal-info-title">Quý khách có thật sự muốn đặt lệnh <span class="color-green">Mua</span></p>
+                    <p class="modal-info-title">Quý khách có thật sự muốn đặt lệnh <span class="color-green">Mua</span>
+                    </p>
                     <div class="modal-info-detail">
                         <div class="modal-info-item">
                             <p class="modal-info-label">Mã CK:</p>
                             <strong class="modal-info-value">BHD</strong>
                         </div>
-                        
+
                         <div class="modal-info-item">
                             <p class="modal-info-label">Khối lượng:</p>
                             <strong class="modal-info-value">10</strong>
                         </div>
-                        
+
                         <div class="modal-info-item">
                             <p class="modal-info-label">Giá đặt:</p>
                             <strong class="modal-info-value">100.000</strong>
                         </div>
-                        
+
                         <div class="modal-info-item">
                             <p class="modal-info-label">Tài khoản:</p>
                             <strong class="modal-info-value color-red">1000201</strong>
@@ -303,7 +304,7 @@
                     </div>
                 </div>
                 <div class="modal-btn">
-                    <button type="button" class="btn-default btn-close" onclick="closeFormConfirm()" >Đóng</button>
+                    <button type="button" class="btn-default btn-close" onclick="closeFormConfirm()">Đóng</button>
                     <button type="button" class="btn-default btn-confirm">Xác nhận</button>
                 </div>
             </form>

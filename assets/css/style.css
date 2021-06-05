@@ -377,7 +377,7 @@ table.table-price tr .symbol:hover {
 }
 
 .txt-floor, .txt-magenta {
-    color: var(--color-ceil);
+    color: var(--color-floor);
 }
 
 .txt-gia-san {
