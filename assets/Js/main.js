@@ -39,24 +39,54 @@ for (let i = 0; i < stocks.length; i++) {
 }
 
 
-showMenuTheme=()=>{
+showMenuTheme = () => {
     let menuThemes = document.querySelector('.header__right-theme-list');
     console.log(menuThemes.style.display)
     if (menuThemes.style.display === 'none') {
         menuThemes.style.display = 'block';
     }
-    else{
+    else {
         menuThemes.style.display = 'none';
     }
 }
 
-showMenuAccount=()=>{
+showMenuAccount = () => {
     let menuAccounts = document.querySelector('.header__right-account-list');
     console.log(menuAccounts.style.display)
     if (menuAccounts.style.display === 'none') {
         menuAccounts.style.display = 'block';
     }
-    else{
+    else {
         menuAccounts.style.display = 'none';
     }
+}
+
+// modal order matching
+
+showModalMatching = () => {
+    let my_modal = document.getElementById('my-modal');
+    console.log(my_modal)
+    my_modal.style.visibility = 'visible';
+    my_modal.style.opacity = 1;
+}
+
+closeForm = () => {
+    let my_modal = document.getElementById('my-modal');
+    console.log(my_modal)
+    my_modal.style.visibility = 'hidden';
+    my_modal.style.opacity = 0;
+}
+
+confirmForm = () => {
+    let my_modal = document.getElementById('confirm-modal');
+    console.log(my_modal)
+    my_modal.style.visibility = 'visible';
+    my_modal.style.opacity = 1;
+}
+
+closeFormConfirm = () => {
+    let my_modal = document.getElementById('confirm-modal');
+    console.log(my_modal)
+    my_modal.style.visibility = 'hidden';
+    my_modal.style.opacity = 0;
 }

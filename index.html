@@ -186,7 +186,7 @@
                 </tbody>
             </table>
         </section>
-        <div class="order-matching">
+        <div class="order-matching" onclick="showModalMatching()">
             <i class="fas fa-cart-plus"></i>
             <span>Đặt lệnh</span>
         </div>
@@ -205,11 +205,11 @@
         <div class="modal-dialog">
             <div class="modal-header">
                 <h5 class="modal-header__title">Đặt lệnh</h5>
-                <i class="far fa-times-circle modal-header__icon-close"></i>
+                <i class="far fa-times-circle  modal-header__icon-close" onclick="closeForm()"></i>
             </div>
             <div class="modal-content">
                 <div class="modal-body">
-                    <form action="" class="modal-form">
+                    <form class="modal-form" >
                         <div class="form-input">
                             <div class="form-item">
                                 <label for="id">Số tài khoản</label>
@@ -219,10 +219,7 @@
                                 <label for="stockId">Mã CK</label>
                                 <input id="stockId" type="text" placeholder="BHD">
                             </div>
-                            <div class="form-item">
-                                <label for="pin">Mã PIN</label>
-                                <input id="pin" type="password" placeholder="******">
-                            </div>
+                            
                             <div class="form-item">
                                 <label for="weight">Khối lượng</label>
                                 <input id="weight" type="number" placeholder="1000">
@@ -231,16 +228,19 @@
                                 <label for="price">Giá đặt</label>
                                 <input id="price" type="number" placeholder="1000105">
                             </div>
-                           
+                            <div class="form-item">
+                                <label for="pin">Mã PIN</label>
+                                <input id="pin" type="password" placeholder="******">
+                            </div>
                         </div>
                         <div class="form-submit">
-                            <button class="btn btn--green">MUA</button>
-                            <button class="btn btn--red">BÁN</button>
+                            <button type="button"  onclick="confirmForm()"  class="btn btn--green">MUA</button>
+                            <button type="button"  class="btn btn--red">BÁN</button>
                         </div>
                     </form>
                 </div>
                 <div class="modal-show-stock">
-                    <div class="order-matching">
+                    <div class="modal-order-matching">
                         <p class="order-matching-title">Khớp lệnh</p>
                         <span class="order-matching-price">Giá: 13.4</span>
                         <span>-</span>
@@ -270,6 +270,46 @@
     </section>
     <!-- End modal order matching -->
 
+    <!-- Begin modal confirm -->
+    <section id="confirm-modal" class="modal">
+        <div class="confirm-modal">
+            <div class="modal-header">
+                <h5 class="modal-header__title">xác nhận đặt lệnh</h5>
+                <i class="fas fa-info-circle modal-header__icon-info"></i>
+            </div> 
+            <form class="modal-content-info">
+                <div class="modal-info">
+                    <p class="modal-info-title">Quý khách có thật sự muốn đặt lệnh <span class="color-green">Mua</span></p>
+                    <div class="modal-info-detail">
+                        <div class="modal-info-item">
+                            <p class="modal-info-label">Mã CK:</p>
+                            <strong class="modal-info-value">BHD</strong>
+                        </div>
+                        
+                        <div class="modal-info-item">
+                            <p class="modal-info-label">Khối lượng:</p>
+                            <strong class="modal-info-value">10</strong>
+                        </div>
+                        
+                        <div class="modal-info-item">
+                            <p class="modal-info-label">Giá đặt:</p>
+                            <strong class="modal-info-value">100.000</strong>
+                        </div>
+                        
+                        <div class="modal-info-item">
+                            <p class="modal-info-label">Tài khoản:</p>
+                            <strong class="modal-info-value color-red">1000201</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-btn">
+                    <button type="button" class="btn-default btn-close" onclick="closeFormConfirm()" >Đóng</button>
+                    <button type="button" class="btn-default btn-confirm">Xác nhận</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- End modal confirm -->
     <script src="./assets/Js/main.js"></script>
     <script src="./assets/Js/base.js"></script>
 </body>
