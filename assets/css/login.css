@@ -11,12 +11,13 @@ body {
 .header__right-language {
     margin-right: 20px;
     position: relative;
+    color: black;
 }
 
 .header__right-language-list {
     position: absolute;
     top: 27px;
-    background-color: var(--background-color-primary);
+    background-color: rgb(241, 241, 243);
     width: 150px;
     display: none;
 }
@@ -32,12 +33,12 @@ body {
     font-size: 12px;
     align-items: center;
     justify-content: space-between;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .header__right-language-item--active, .header__right-language-item:hover {
-    background-color: var(--background-color-active);
-    color: var(--color-white-active);
+    background-color: var(--text-color-third);
+    color: rgb(0, 0, 0);
     font-weight: 500;
 }
 
@@ -52,7 +53,7 @@ body {
     outline: none;
     background: none;
     border: none;
-    color: var(--color-white-active);
+    color: var(--primary-color);
     width: 110px;
 }
 
@@ -194,6 +195,7 @@ input {
 .forgotPassword {
     font-size: 13px;
     text-decoration: underline;
+    color: gray;
 }
 
 .forgotPassword:hover {
@@ -348,6 +350,6 @@ input:focus {
 .copyright {
     text-align: center;
     background-color: rgb(148, 162, 189);
-    padding: 23px 0;
+    padding: 22px 0;
     color: #fff;
 }

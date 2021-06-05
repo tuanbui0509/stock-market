@@ -20,7 +20,6 @@
 
 <body>
     <!-- Begin header -->
-
     <header class="header topbar" id="header">
         <div class="header__left">
             <a href="index.html" class="header__logo"><img src="./assets/images/ntnt.png" alt=""
@@ -29,8 +28,9 @@
         <div class="header__right">
             <div class="header__right-language">
 
-                <button class="header__right-label-language" onclick="showMenuLanguage()"> <span><img src="./assets/images/vietnam-logo.png"
-                            class="img-responsive" alt=""></span> Tiếng Việt <i class="fas fa-chevron-down"></i></button>
+                <button class="header__right-label-language" onclick="showMenuLanguage()"> <span><img
+                            src="./assets/images/vietnam-logo.png" class="img-responsive" alt=""></span> Tiếng Việt <i
+                        class="fas fa-chevron-down"></i></button>
 
                 <ul class="header__right-language-list">
                     <li class="header__right-language-item header__right-language-item--active">
@@ -51,8 +51,8 @@
                 </ul>
             </div>
             <div class="header__right-theme">
-                <button class="header__right-label-theme" onclick="showMenuTheme()">Light Theme<span><img src="./assets/images/sunny.png"
-                            class="img-responsive" alt=""></span></button>
+                <button class="header__right-label-theme" onclick="showMenuTheme()">Light Theme<span><img
+                            src="./assets/images/sunny.png" class="img-responsive" alt=""></span></button>
                 <ul class="header__right-theme-list">
                     <li class="header__right-theme-item header__right-theme-item--active">Light Theme <span
                             class="header__right-flag"><img src="./assets/images/sunny.png" class="img-responsive"
@@ -70,18 +70,20 @@
                 <span class="header__right-date-label">thứ tư, 02/06/2021</span>
             </div>
             <div class="header__right-account">
-                <span class="header__right-account-label" onclick="showMenuAccount()"><img src="./assets/images/user.png" alt=""
-                        class="img-responsive"></span>
+                <span class="header__right-account-label" onclick="showMenuAccount()"><img
+                        src="./assets/images/user.png" alt="" class="img-responsive"></span>
                 <ul class="header__right-account-list">
                     <li class="header__right-account-item">Chào mừng đến với iBoard </li>
                     <li class="header__right-account-item"><span class="header__right-flag"><img
-                                src="./assets/images/user (2).png" class="img-responsive" alt=""></span> <a href="login.html">Đăng nhập</a>  </li>
+                                src="./assets/images/user (2).png" class="img-responsive" alt=""></span> <a
+                            href="login.html">Đăng nhập</a> </li>
                 </ul>
             </div>
         </div>
     </header>
     <!-- End header -->
 
+    <!-- Begin main -->
     <main class="content-wp">
         <section class="content">
             <div class="content__search">
@@ -184,44 +186,92 @@
                 </tbody>
             </table>
         </section>
-    </main>
-
-    <!-- <div class="dialog overlay" id="my-dialog">
-        <div class="dialog-body">
-            
+        <div class="order-matching">
+            <i class="fas fa-cart-plus"></i>
+            <span>Đặt lệnh</span>
         </div>
-    </div>
+    </main>
+    <!-- End main -->
 
-    <style>
-        .dialog {
-            position: fixed;
-            /* top: 0; */
-            right: 0;
-            bottom: 0px;
-            left: 0;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            /* visibility: hidden; */
-            /* opacity: 0; */
-            transition: opacity 1s;
-            padding: 50px;
-        }
+    <!-- Begin footer -->
+    <footer>
+        <p>Giá x 1000 VNĐ. Khối lượng x 1. Giá trị x 1000000 VNĐ .Bản quyền thuộc về Công ty Cổ phần Chứng khoán NTNT .©
+            2021. </p>
+    </footer>
+    <!-- End footer -->
 
-        .overlay {
-            background-color: rgb(101, 235, 101);
-        }
+    <!-- Begin modal order matching -->
+    <section id="my-modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h5 class="modal-header__title">Đặt lệnh</h5>
+                <i class="far fa-times-circle modal-header__icon-close"></i>
+            </div>
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form action="" class="modal-form">
+                        <div class="form-input">
+                            <div class="form-item">
+                                <label for="id">Số tài khoản</label>
+                                <input id="id" type="text" placeholder="1000105">
+                            </div>
+                            <div class="form-item">
+                                <label for="stockId">Mã CK</label>
+                                <input id="stockId" type="text" placeholder="BHD">
+                            </div>
+                            <div class="form-item">
+                                <label for="pin">Mã PIN</label>
+                                <input id="pin" type="password" placeholder="******">
+                            </div>
+                            <div class="form-item">
+                                <label for="weight">Khối lượng</label>
+                                <input id="weight" type="number" placeholder="1000">
+                            </div>
+                            <div class="form-item">
+                                <label for="price">Giá đặt</label>
+                                <input id="price" type="number" placeholder="1000105">
+                            </div>
+                           
+                        </div>
+                        <div class="form-submit">
+                            <button class="btn btn--green">MUA</button>
+                            <button class="btn btn--red">BÁN</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-show-stock">
+                    <div class="order-matching">
+                        <p class="order-matching-title">Khớp lệnh</p>
+                        <span class="order-matching-price">Giá: 13.4</span>
+                        <span>-</span>
+                        <span class="order-matching-weight">Số lượng: 1,340</span>
+                    </div>
+                    <div class="compare-stock">
+                        <div class="info-stock info-ceil">
+                            <label for="">Trần: </label>
+                            <span class="ceil">14.5</span>
+                        </div>
+                        <div class="info-stock info-standard">
+                            <label for="">TC: </label>
+                            <span class="standard">13.4</span>
 
-        .dialog-body {
-            max-width: 400px;
-            position: relative;
-            padding: 16px;
-            background-color: #fff;
-        }
-    </style> -->
+                        </div>
+                        <div class="info-stock info-floor">
+                            <label for="">Sàn: </label>
+                            <span class="floor">12.3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <span> <strong>Hướng dẫn:</strong> 1000 đồng - Đơn vị khối lượng: 1 cổ phiếu - Đơn vị tiền: đồng</span>
+            </div>
+        </div>
+    </section>
+    <!-- End modal order matching -->
 
     <script src="./assets/Js/main.js"></script>
+    <script src="./assets/Js/base.js"></script>
 </body>
 
 </html>
