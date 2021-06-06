@@ -41,7 +41,14 @@ for (let i = 0; i < stocks.length; i++) {
 
 showMenuTheme = () => {
     let menuThemes = document.querySelector('.header__right-theme-list');
-    console.log(menuThemes.style.display)
+    let menuAccounts = document.querySelector('.header__right-account-list');
+    let menuLanguages = document.querySelector('.header__right-language-list');
+    if(menuLanguages){
+        menuLanguages.style.display = 'none';
+    }
+    if(menuAccounts){
+        menuAccounts.style.display = 'none';
+    }
     if (menuThemes.style.display === 'block') {
         menuThemes.style.display = 'none';
     }
@@ -52,8 +59,14 @@ showMenuTheme = () => {
 
 showMenuAccount = () => {
     let menuAccounts = document.querySelector('.header__right-account-list');
-    console.log(menuAccounts)
-    // menuAccounts.style.display = 'block';
+    let menuLanguages = document.querySelector('.header__right-language-list');
+    let menuThemes = document.querySelector('.header__right-theme-list');
+    if(menuLanguages){
+        menuLanguages.style.display = 'none';
+    }
+    if(menuThemes){
+        menuThemes.style.display = 'none';
+    }
     if (menuAccounts.style.display === 'block') {
         menuAccounts.style.display = 'none';
     }
@@ -91,3 +104,19 @@ closeFormConfirm = () => {
     my_modal.style.visibility = 'hidden';
     my_modal.style.opacity = 0;
 }
+
+// Tab pill
+
+function openCity(evt, floor) {
+    let i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("table-light__content");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("content__tab-pill");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace("content__tab-pill--active", "");
+    }
+    document.getElementById(floor).style.display = "inline-table";
+    evt.currentTarget.className += " content__tab-pill--active";
+  }

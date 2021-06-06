@@ -90,6 +90,12 @@
                 <input type="text" placeholder="Nhập mã CK ..." class="content__search-input">
                 <i class=" content__search-icon fas fa-search"></i>
             </div>
+            <div class="content__tab-pill content__tab-pill--active" onclick="openCity(event, 'HCM')">
+                <div class="content__tab-title">HCM</div>
+            </div>
+            <div class="content__tab-pill" onclick="openCity(event, 'HNX')">
+                <div class="content__tab-title">HNX</div>
+            </div>
         </section>
         <section class="table-light-wp">
             <table class="table-light__header">
@@ -138,10 +144,10 @@
                 </thead>
             </table>
 
-            <table class="table-light__content">
+            <table class="table-light__content" id="HCM">
                 <tbody class="line-stocks">
                     <!-- 1 stock -->
-                    <tr class="stock" id="BID">
+                    <tr class="stock" id="BID" ondblclick="showModalMatching()">
                         <td class="stockID" data-tooltip="Ngân hàng Thương mại Cổ phần Đầu tư và Phát triển Việt Nam ">
                             BID</td>
                         <td class="special txt-floor">50.7</td>
@@ -165,6 +171,54 @@
 
                     <tr class="stock" id="VJC">
                         <td class="stockID" data-tooltip="Công ty công nghệ VJC">VJC</td>
+                        <td class="special txt-floor">114</td>
+                        <td class="special txt-ceil">99.2</td>
+                        <td class="special txt-standard">106.6</td>
+                        <td class="">99.2</td>
+                        <td class="">1,100</td>
+                        <td class="">106.5</td>
+                        <td class="">5,300</td>
+                        <td class="">106.7</td>
+                        <td class="">17,500</td>
+                        <td class="special">106.9</td>
+                        <td class="special">15,000</td>
+                        <td class="">106.9</td>
+                        <td class="">14,500</td>
+                        <td class="">107</td>
+                        <td class="">14,500</td>
+                        <td class="">107.1</td>
+                        <td class="">14,500</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table-light__content" id="HNX">
+                <tbody class="line-stocks">
+                    <!-- 1 stock -->
+                    <tr class="stock" id="BID" ondblclick="showModalMatching()">
+                        <td class="stockID" data-tooltip="Ngân hàng Thương mại Cổ phần Đầu tư và Phát triển Việt Nam ">
+                            AAA</td>
+                        <td class="special txt-floor">50.7</td>
+                        <td class="special txt-ceil">44.1</td>
+                        <td class="special txt-standard">47.4</td>
+                        <td class="">48.7</td>
+                        <td class="">70,100</td>
+                        <td class="">48.75</td>
+                        <td class="">5,300</td>
+                        <td class="">48.8</td>
+                        <td class="">17,500</td>
+                        <td class="special">48.8</td>
+                        <td class="special">15,000</td>
+                        <td class="">48.9</td>
+                        <td class="">14,500</td>
+                        <td class="">48.95</td>
+                        <td class="">14,500</td>
+                        <td class="">49</td>
+                        <td class="">14,500</td>
+                    </tr>
+
+                    <tr class="stock" id="VJC">
+                        <td class="stockID" data-tooltip="Công ty công nghệ VJC">BBB</td>
                         <td class="special txt-floor">114</td>
                         <td class="special txt-ceil">99.2</td>
                         <td class="special txt-standard">106.6</td>
